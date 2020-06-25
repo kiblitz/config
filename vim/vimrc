@@ -1,0 +1,31 @@
+" two space tab industry standard
+set tabstop=2
+set expandtab
+
+" auto indent in functions
+set shiftwidth=2
+
+" syntax highlighting
+syntax on
+
+" highlight word search and unhighlight on (\)
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+nnoremap \ :noh<return>
+
+" show matching parentheses / brackets
+set showmatch
+
+" toggle code folds with space
+nnoremap <space> za
+set foldmethod=indent
+set nofoldenable
+
+" no wrapped line skip
+nmap j gj
+nmap k gk
+
+" nice color scheme (RG colorblind POV)
+color elflord
