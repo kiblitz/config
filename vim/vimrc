@@ -27,5 +27,8 @@ set nofoldenable
 nmap j gj
 nmap k gk
 
+" memory configuration
+set viminfo='100,<1000,s100,h
+
 " nice color scheme (RG colorblind POV)
 color elflord
