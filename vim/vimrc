@@ -19,9 +19,19 @@ nnoremap \ :noh<return>
 set showmatch
 
 " toggle code folds with space
-nnoremap <space> za
+nnoremap <space> :call ToggleFolds()<CR>
 set foldmethod=indent
 set nofoldenable
+let $foldOn=0
+function ToggleFolds()
+  if $foldOn==1
+    :exe "normal zR"
+    let $foldOn=0
+  else
+    :exe "normal zM"
+    let $foldOn=1
+  endif
+endfunction
 
 " no wrapped line skip
 nmap j gj
@@ -30,5 +40,5 @@ nmap k gk
 " memory configuration
 set viminfo='100,<1000,s100,h
 
-" nice color scheme (RG colorblind POV)
+" nice color scheme
 color elflord
